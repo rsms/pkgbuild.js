@@ -1,0 +1,52 @@
+digraph G {
+  overlap=false;
+  splines=true;
+  node [shape=none, margin="0.15,0.1", color="#eeeeee",
+        fontname="Inter UI", fontsize=13];
+  edge [color="#222222"];
+  N0 [label="util.js"];
+  N1 [label="assemble.js"];
+  N2 [label="logger.js"];
+  N3 [label="dag.js"];
+  N4 [label="err.js"];
+  N5 [label="intrinsic.js"];
+  N6 [label="target.js"];
+  N7 [label="parse.js"];
+  N8 [label="srcfile.js"];
+  N9 [label="pkg.js"];
+  N10 [label="fswatch.js"];
+  N11 [label="optimize.js"];
+  N12 [label="codegen.js"];
+  N13 [label="build.js"];
+  subgraph S0 {
+    N7 -> N3;
+    N7 -> N4;
+    N7 -> N5;
+    N7 -> N2;
+    N7 -> N6;
+    N8 -> N0;
+    N9 -> N8;
+    N13 -> N9;
+    N13 -> N0;
+    N13 -> N7;
+    N13 -> N10;
+    N13 -> N1;
+    N13 -> N8;
+    N13 -> N11;
+    N13 -> N12;
+  };
+  subgraph S1 {
+    edge [arrowhead="empty", color="#00000022", constraint=false];
+    N1 -> N0;
+    N2 -> N0;
+    N5 -> N0;
+    N6 -> N0;
+    N7 -> N0;
+    N8 -> N7;
+    N9 -> N0;
+    N10 -> N0;
+    N11 -> N0;
+    N12 -> N0;
+    N13 -> N2;
+  };
+}

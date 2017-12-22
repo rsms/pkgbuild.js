@@ -1,0 +1,13 @@
+{
+  "name": "pkgbuild",
+  "version": "0.1.0",
+  "description": "JS package builder",
+  "main": "pkgbuild.js",
+  "repository": "https://github.com/rsms/js-pkgbuild",
+  "author": "Rasmus Andersson <rsms.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "source-map-support": "^0.5.0"
+  },
+  "dependencies": {}
+}

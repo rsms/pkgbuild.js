@@ -1,0 +1,8 @@
+.DS_Store
+*.latest-build-broken*
+/*.debug.*
+/lib/uglifyjs
+/example/hello.*
+/tmp
+/_local
+/node_modules
